@@ -2,7 +2,7 @@ version: '2'
 
 services:
   freepbx-app:
-    container_name: freepbx-app
+    container_name: freepbx-app-2
     image: tiredofit/freepbx
     ports:
      #### If you aren't using a reverse proxy
@@ -13,7 +13,7 @@ services:
       - 5170:5170/udp
       - 28000-28100:28000-28100/udp
      #### Flash Operator Panel
-      - 4455:4455
+      - 4456:4455
     volumes:
       - ./certs:/certs
       - ./data:/data
@@ -34,10 +34,10 @@ services:
       - LETSENCRYPT_HOST=host.example.com
       - LETSENCRYPT_EMAIL=admin@example.com
 
-      - ZABBIX_HOSTNAME=freepbx-app
+      - ZABBIX_HOSTNAME=freepbx-app-2
 
       - RTP_START=28000
-      - RTP_FINISH=8100
+      - RTP_FINISH=28100
     
      ## Use for External MySQL Server
       - DB_EMBEDDED=TRUE
