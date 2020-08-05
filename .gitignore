@@ -3,4 +3,4 @@ data
 db
 dbbackup
 logs
-docker-compose
+docker-compose.yml
