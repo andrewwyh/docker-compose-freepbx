@@ -3,3 +3,4 @@ data
 db
 dbbackup
 logs
+docker-compose

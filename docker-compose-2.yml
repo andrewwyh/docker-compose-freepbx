@@ -6,7 +6,7 @@ services:
     image: tiredofit/freepbx
     ports:
      #### If you aren't using a reverse proxy
-      - 81:81
+      - 81:80
      #### If you want SSL Support and not using a reverse proxy
      #- 443:443
       - 5070:5070/udp
@@ -37,7 +37,7 @@ services:
       - ZABBIX_HOSTNAME=freepbx-app
 
       - RTP_START=28000
-      - RTP_FINISH=28100
+      - RTP_FINISH=8100
     
      ## Use for External MySQL Server
       - DB_EMBEDDED=TRUE
